@@ -30,13 +30,13 @@ config_file_path = os.path.join(app_dir, 'config.js')
 # Create the app directory if it doesn't exist
 os.makedirs(app_dir, exist_ok=True)
 
-# Download and extract the app.zip
+# Download and extract app.zip
 print(f"Downloading {app_zip_url}...")
 download_file(app_zip_url, app_zip_path)
 print(f"Extracting {app_zip_path} to {app_dir}...")
 extract_zip(app_zip_path, app_dir)
 
-# Download and extract the repo.zip into the app/repo directory
+# Download and extract repo.zip
 print(f"Downloading {repo_zip_url}...")
 download_file(repo_zip_url, repo_zip_path)
 print(f"Extracting {repo_zip_path} to {app_dir}...")
@@ -45,7 +45,7 @@ extract_zip(repo_zip_path, app_dir)
 # Write the config.js file
 with open(config_file_path, 'w') as config_file:
     config_file.write('let repository = "EmeraldACE_web-main/"\n')
-print(f"config.js written at {config_file_path}")
+print(f"Configuration written at {config_file_path}")
 
 # Clean
 print(f"Cleaning...")
